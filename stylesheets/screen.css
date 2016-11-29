@@ -417,8 +417,15 @@ ul {
 }
 
 ul li {
+  -webkit-transition: all 0.5s ease; 
+  transition: all 0.5s ease;
   padding-left: 10px;
   background: transparent url(../images/chevron.png) left 6px no-repeat;
+}
+
+ul li:hover{
+ padding-left:30px;
+  
 }
 
 blockquote {
