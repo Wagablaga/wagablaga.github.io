@@ -273,8 +273,8 @@ section#main_content {
   min-height:185px;
 }
 
-section #main_content:hover{
-  padding:20px 50px 0;
+section#main_content:hover{
+  padding:none;
   -webkit-transition: all 0.5s ease; 
   transition: all 0.5s ease;
 }
