@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Intro to Canvas</title>
+<link href="" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<canvas id="myCanvas" width="400" height="400" style="border:1px solid black">  
+    
+    Your browser is outdated!
+    
+    </canvas>
+	
+    <script>
+	function draw(){
+	var kermit=document.getElementById("myCanvas");
+	var ctx = kermit.getContext("2d");
+	
+	
+	ctx.beginPath();
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,200);
+	ctx.lineTo(400,200);
+	ctx.stroke();
+	ctx.closePath();
+	
+	ctx.beginPath();
+	ctx.fillStyle='blue';
+	ctx.fillRect(100,100, 300,50);
+	ctx.strokeStyle='red';
+	ctx.strokeRect(100,100, 300,50);
+	ctx.strokeRect(50,50,20,70);
+	ctx.closePath();
+	
+	ctx.beginPath();
+	ctx.arc(100,300,50,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fill();
+	ctx.closePath();
+	
+	ctx.beginPath();
+	ctx.font='40px cursive';
+	ctx.fillText("Vanse", 50, 390);
+	}
+	
+	
+	window.onload = draw;
+
+	</script>
+
+
+
+</body>
+
+
+
+
+</html>

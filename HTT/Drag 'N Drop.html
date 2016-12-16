@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+	function allowDrop(ev) {
+	ev.preventDefault();	
+	}
+	
+	function drag(ev){
+	ev.dataTransfer.setData("text", ev.target.id);	
+	}
+	
+	function drop(ev){
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));	
+	}
+	
+</script>
+
+<style>
+#div1{
+border:1px solid black;
+height:300px;
+width:400px;
+}
+</style>
+
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="HTT CSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+
+<img id="drag1" src="Wagablogo.jpg" alt="croaker" width="259" height="194" draggable="true" ondragstart="drag(event)" />
+
+</body>
+</html>
